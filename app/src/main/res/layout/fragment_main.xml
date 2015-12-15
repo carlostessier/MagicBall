@@ -16,15 +16,16 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="32sp"
-        android:id="@+id/textView" />
+        android:id="@+id/tv_prediction" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView"
+        android:id="@+id/b_prediction"
+        android:layout_below="@+id/tv_prediction"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
          />
 
 </RelativeLayout>

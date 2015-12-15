@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 public class MainActivityFragment extends Fragment {
 
-    static View textView;
+    static TextView tPrediction;
 
     public MainActivityFragment() {
     }
@@ -36,21 +36,19 @@ public class MainActivityFragment extends Fragment {
 
     /**
      * Method iniciate the views and
-     * add a Listener to the button prediction
-     * @param rootView
+     *         add a Listener to the button prediction
+     * @param rootView View to the fragment layout
      */
     private void iniziateViews(View rootView) {
-        TextView tPrediction = (TextView)
-                rootView.findViewById(R.id.textView);
+         tPrediction = (TextView)
+                rootView.findViewById(R.id.tv_prediction);
 
-        Button button = (Button) rootView.findViewById(R.id.button);
+        Button button = (Button) rootView.findViewById(R.id.b_prediction);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String sPrediction =  MakePrediction.getPrediction(getActivity());
-                TextView tPrediction = (TextView)
-                        MainActivityFragment.textView.findViewById(R.id.textView);
                 tPrediction.setText(sPrediction);
             }
         });
