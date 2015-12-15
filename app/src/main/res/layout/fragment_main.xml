@@ -2,30 +2,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="es.carlostessier.magicball.MainActivityFragment"
-    >
+    android:background="@android:color/black">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="32sp"
-        android:id="@+id/tv_prediction" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:clickable="true"/>
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/question"
-        android:id="@+id/b_prediction"
-        android:layout_below="@+id/tv_prediction"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-         />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/background"
+        android:layout_alignStart="@+id/background">
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_weight="0.2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_prediction"
+            android:shadowColor="@android:color/white"
+            android:shadowRadius="10"
+            android:layout_weight="0.6"/>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
 
 </RelativeLayout>

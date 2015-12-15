@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -43,9 +43,9 @@ public class MainActivityFragment extends Fragment {
          tPrediction = (TextView)
                 rootView.findViewById(R.id.tv_prediction);
 
-        Button button = (Button) rootView.findViewById(R.id.b_prediction);
+        ImageView background = (ImageView) rootView.findViewById(R.id.background);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        background.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String sPrediction =  MakePrediction.getPrediction(getActivity());
